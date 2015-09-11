@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KnowledgeDetailViewController">
+            <connections>
+                <outlet property="bgView" destination="UXD-KS-Si1" id="bX3-5T-mpD"/>
+                <outlet property="contentView" destination="pye-yi-UZo" id="x06-Ed-HEa"/>
+                <outlet property="scrollView" destination="ipu-nn-Xvx" id="c57-Nl-Pxe"/>
+                <outlet property="titleLabel" destination="kMU-TD-Myb" id="83j-gd-FU5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ipu-nn-Xvx">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ipu-nn-Xvx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3N5-Xl-tC7"/>
+                <constraint firstAttribute="trailing" secondItem="ipu-nn-Xvx" secondAttribute="trailing" id="Jgc-rB-WgB"/>
+                <constraint firstItem="ipu-nn-Xvx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oLT-Am-iTJ"/>
+                <constraint firstAttribute="bottom" secondItem="ipu-nn-Xvx" secondAttribute="bottom" id="sxy-XH-Yqe"/>
+            </constraints>
+            <point key="canvasLocation" x="-44" y="176"/>
+        </view>
+        <view contentMode="scaleToFill" id="UXD-KS-Si1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pye-yi-UZo">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4D-ph-FcE">
+                            <rect key="frame" x="0.0" y="45" width="320" height="1"/>
+                            <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Pji-As-wfV"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMU-TD-Myb">
+                            <rect key="frame" x="10" y="10" width="300" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="u0H-n9-Lfu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="kMU-TD-Myb" secondAttribute="trailing" constant="10" id="IgS-hI-bgA"/>
+                        <constraint firstItem="A4D-ph-FcE" firstAttribute="top" secondItem="kMU-TD-Myb" secondAttribute="bottom" constant="10" id="O4R-aK-Nfb"/>
+                        <constraint firstItem="kMU-TD-Myb" firstAttribute="leading" secondItem="pye-yi-UZo" secondAttribute="leading" constant="10" id="Og7-Mk-uRB"/>
+                        <constraint firstAttribute="trailing" secondItem="A4D-ph-FcE" secondAttribute="trailing" id="Pou-77-cze"/>
+                        <constraint firstItem="A4D-ph-FcE" firstAttribute="leading" secondItem="pye-yi-UZo" secondAttribute="leading" id="lwr-tT-CaL"/>
+                        <constraint firstItem="kMU-TD-Myb" firstAttribute="top" secondItem="pye-yi-UZo" secondAttribute="top" constant="10" id="pzN-5R-HJ9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="pye-yi-UZo" secondAttribute="bottom" id="1Ne-Cp-AUt"/>
+                <constraint firstItem="pye-yi-UZo" firstAttribute="leading" secondItem="UXD-KS-Si1" secondAttribute="leading" id="96w-k2-Uwf"/>
+                <constraint firstItem="pye-yi-UZo" firstAttribute="top" secondItem="UXD-KS-Si1" secondAttribute="top" id="W5y-ny-96T"/>
+                <constraint firstAttribute="trailing" secondItem="pye-yi-UZo" secondAttribute="trailing" id="bmp-cQ-H3I"/>
+            </constraints>
+            <point key="canvasLocation" x="250" y="153"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

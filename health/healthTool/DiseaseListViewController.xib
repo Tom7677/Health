@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiseaseListViewController">
+            <connections>
+                <outlet property="confirmBtn" destination="gSk-qi-fKI" id="zsv-Mj-3vu"/>
+                <outlet property="tableView" destination="pUr-RI-63o" id="OwB-Ag-mFH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pUr-RI-63o">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzY-YQ-hBU">
+                    <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSk-qi-fKI">
+                            <rect key="frame" x="15" y="9" width="290" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="DFK-sS-Z8I"/>
+                            </constraints>
+                            <state key="normal" title="确   定">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmBtnAction:" destination="-1" eventType="touchUpInside" id="U7N-rJ-Xk9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Rng-80-bqR"/>
+                        <constraint firstItem="gSk-qi-fKI" firstAttribute="top" secondItem="pzY-YQ-hBU" secondAttribute="top" constant="9" id="aig-fi-asW"/>
+                        <constraint firstItem="gSk-qi-fKI" firstAttribute="leading" secondItem="pzY-YQ-hBU" secondAttribute="leading" constant="15" id="kti-pX-nos"/>
+                        <constraint firstAttribute="trailing" secondItem="gSk-qi-fKI" secondAttribute="trailing" constant="15" id="lfm-Ew-uCH"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="pzY-YQ-hBU" secondAttribute="trailing" id="2Zz-TO-B3C"/>
+                <constraint firstItem="pUr-RI-63o" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4v0-Oa-94o"/>
+                <constraint firstItem="pUr-RI-63o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Jre-Kl-CYp"/>
+                <constraint firstAttribute="bottom" secondItem="pzY-YQ-hBU" secondAttribute="bottom" id="RZ2-ht-Eqy"/>
+                <constraint firstAttribute="trailing" secondItem="pUr-RI-63o" secondAttribute="trailing" id="Yrp-UE-smg"/>
+                <constraint firstItem="pzY-YQ-hBU" firstAttribute="top" secondItem="pUr-RI-63o" secondAttribute="bottom" id="ayo-I2-MTy"/>
+                <constraint firstItem="pzY-YQ-hBU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="sAf-3m-Djr"/>
+            </constraints>
+            <point key="canvasLocation" x="10" y="105"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
