@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainHealthToolViewController">
@@ -23,10 +23,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="wrN-D3-JVZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KDz-Sb-t2r"/>
-                <constraint firstAttribute="trailing" secondItem="wrN-D3-JVZ" secondAttribute="trailing" id="O2k-xH-0WU"/>
-                <constraint firstItem="wrN-D3-JVZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YrB-L9-fh5"/>
-                <constraint firstAttribute="bottom" secondItem="wrN-D3-JVZ" secondAttribute="bottom" id="vEH-e9-5PA"/>
+                <constraint firstAttribute="bottom" secondItem="wrN-D3-JVZ" secondAttribute="bottom" id="KKe-TJ-Pq9"/>
+                <constraint firstItem="wrN-D3-JVZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TPe-sI-S2Y"/>
+                <constraint firstAttribute="trailing" secondItem="wrN-D3-JVZ" secondAttribute="trailing" id="eYa-aR-7Pr"/>
+                <constraint firstItem="wrN-D3-JVZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uqe-a1-Qnx"/>
             </constraints>
             <point key="canvasLocation" x="294" y="262"/>
         </view>
@@ -37,38 +37,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NNM-CZ-VNS">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8i-In-fl9">
-                            <rect key="frame" x="0.0" y="20" width="160" height="130"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_disease.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rfu-Kp-isn">
-                                    <rect key="frame" x="45" y="8" width="70" height="70"/>
-                                </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="常见疾病" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQX-WI-Aj3">
-                                    <rect key="frame" x="53" y="91" width="54" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q67-kl-9NF">
-                                    <rect key="frame" x="0.0" y="0.0" width="160" height="130"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                    <inset key="titleEdgeInsets" minX="-119" minY="0.0" maxX="0.0" maxY="-68"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="-23" maxX="0.0" maxY="0.0"/>
-                                    <state key="normal">
-                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="diseaseBtnAction:" destination="-1" eventType="touchUpInside" id="I7m-5c-3j3"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="130" id="6by-8m-lz8"/>
-                                <constraint firstAttribute="width" constant="160" id="Pmd-Ej-gir"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aA4-3V-eqa">
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aA4-3V-eqa">
                             <rect key="frame" x="160" y="20" width="160" height="130"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_drug.png" translatesAutoresizingMaskIntoConstraints="NO" id="KkL-mD-dKQ">
@@ -94,12 +63,8 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="130" id="EE6-F3-vxp"/>
-                                <constraint firstAttribute="width" constant="160" id="bFc-15-aDW"/>
-                            </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b5c-I8-FXr">
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b5c-I8-FXr">
                             <rect key="frame" x="0.0" y="180" width="160" height="130"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_healthBook.png" translatesAutoresizingMaskIntoConstraints="NO" id="hGX-Ln-Hlc">
@@ -125,12 +90,8 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="130" id="0rz-Wu-GuP"/>
-                                <constraint firstAttribute="width" constant="160" id="swg-mX-nGC"/>
-                            </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osz-1G-GNn">
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="osz-1G-GNn">
                             <rect key="frame" x="160" y="180" width="160" height="130"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_laboratory Test.png" translatesAutoresizingMaskIntoConstraints="NO" id="mSH-xo-McD">
@@ -156,12 +117,8 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="160" id="b3x-kj-fUi"/>
-                                <constraint firstAttribute="height" constant="130" id="xxP-On-gMx"/>
-                            </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVQ-z5-McN">
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVQ-z5-McN">
                             <rect key="frame" x="0.0" y="340" width="160" height="130"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_surgery.png" translatesAutoresizingMaskIntoConstraints="NO" id="sfg-RL-enc">
@@ -187,13 +144,9 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="130" id="1C3-X5-S9L"/>
-                                <constraint firstAttribute="width" constant="160" id="bSR-b2-aCO"/>
-                            </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PiH-WJ-Juu">
-                            <rect key="frame" x="160" y="340" width="160" height="130"/>
+                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PiH-WJ-Juu">
+                            <rect key="frame" x="0.0" y="20" width="160" height="130"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_hospital.png" translatesAutoresizingMaskIntoConstraints="NO" id="UQO-Rl-472">
                                     <rect key="frame" x="45" y="8" width="70" height="70"/>
@@ -218,49 +171,33 @@
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="160" id="kqQ-7t-f6w"/>
-                                <constraint firstAttribute="height" constant="130" id="oTa-qn-6mZ"/>
-                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstItem="osz-1G-GNn" firstAttribute="leading" secondItem="b5c-I8-FXr" secondAttribute="trailing" id="0oq-ur-EWZ"/>
-                        <constraint firstAttribute="centerX" secondItem="m8i-In-fl9" secondAttribute="centerX" constant="80" id="640-cP-e07"/>
-                        <constraint firstItem="aA4-3V-eqa" firstAttribute="leading" secondItem="m8i-In-fl9" secondAttribute="trailing" id="DXN-WH-qIb"/>
-                        <constraint firstAttribute="centerX" secondItem="XVQ-z5-McN" secondAttribute="centerX" constant="80" id="QzO-Te-Kel"/>
-                        <constraint firstItem="PiH-WJ-Juu" firstAttribute="leading" secondItem="XVQ-z5-McN" secondAttribute="trailing" id="TK7-6a-hWS"/>
-                        <constraint firstItem="osz-1G-GNn" firstAttribute="top" secondItem="aA4-3V-eqa" secondAttribute="bottom" constant="30" id="fCw-QC-H8e"/>
-                        <constraint firstItem="aA4-3V-eqa" firstAttribute="top" secondItem="NNM-CZ-VNS" secondAttribute="top" constant="20" id="gYd-k3-xp7"/>
-                        <constraint firstItem="b5c-I8-FXr" firstAttribute="top" secondItem="m8i-In-fl9" secondAttribute="bottom" constant="30" id="hhY-EI-qWx"/>
-                        <constraint firstAttribute="centerX" secondItem="b5c-I8-FXr" secondAttribute="centerX" constant="80" id="pJj-5S-Vsb"/>
-                        <constraint firstItem="m8i-In-fl9" firstAttribute="top" secondItem="NNM-CZ-VNS" secondAttribute="top" constant="20" id="tzu-0l-6nt"/>
-                        <constraint firstItem="PiH-WJ-Juu" firstAttribute="top" secondItem="osz-1G-GNn" secondAttribute="bottom" constant="30" id="vAm-GV-RQM"/>
-                        <constraint firstItem="XVQ-z5-McN" firstAttribute="top" secondItem="b5c-I8-FXr" secondAttribute="bottom" constant="30" id="vj8-YN-CB1"/>
+                        <constraint firstItem="b5c-I8-FXr" firstAttribute="centerX" secondItem="NNM-CZ-VNS" secondAttribute="centerX" constant="-80" id="IaN-gV-3S9"/>
+                        <constraint firstItem="PiH-WJ-Juu" firstAttribute="centerX" secondItem="NNM-CZ-VNS" secondAttribute="centerX" constant="-80" id="WYN-8V-5fT"/>
+                        <constraint firstItem="osz-1G-GNn" firstAttribute="centerX" secondItem="NNM-CZ-VNS" secondAttribute="centerX" constant="80" id="gKH-e1-EL7"/>
+                        <constraint firstItem="aA4-3V-eqa" firstAttribute="centerX" secondItem="NNM-CZ-VNS" secondAttribute="centerX" constant="80" id="lo7-qS-XF3"/>
+                        <constraint firstItem="XVQ-z5-McN" firstAttribute="centerX" secondItem="NNM-CZ-VNS" secondAttribute="centerX" constant="-80" id="rjX-IG-Ypm"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="NNM-CZ-VNS" secondAttribute="bottom" id="9hm-iB-FRv"/>
-                <constraint firstAttribute="trailing" secondItem="NNM-CZ-VNS" secondAttribute="trailing" id="jje-4W-ERo"/>
-                <constraint firstItem="NNM-CZ-VNS" firstAttribute="leading" secondItem="A0O-A7-rs3" secondAttribute="leading" id="nLp-cb-KlP"/>
-                <constraint firstItem="NNM-CZ-VNS" firstAttribute="top" secondItem="A0O-A7-rs3" secondAttribute="top" id="whW-71-vvK"/>
+                <constraint firstItem="NNM-CZ-VNS" firstAttribute="top" secondItem="A0O-A7-rs3" secondAttribute="top" id="1cx-s6-CAI"/>
+                <constraint firstAttribute="bottom" secondItem="NNM-CZ-VNS" secondAttribute="bottom" id="EkE-9b-uh4"/>
+                <constraint firstAttribute="trailing" secondItem="NNM-CZ-VNS" secondAttribute="trailing" id="U0E-gZ-xn0"/>
+                <constraint firstItem="NNM-CZ-VNS" firstAttribute="leading" secondItem="A0O-A7-rs3" secondAttribute="leading" id="UNr-La-huu"/>
             </constraints>
+            <point key="canvasLocation" x="676" y="273"/>
         </view>
     </objects>
     <resources>
-        <image name="icon_disease.png" width="70" height="70"/>
         <image name="icon_drug.png" width="70" height="70"/>
         <image name="icon_healthBook.png" width="70" height="70"/>
         <image name="icon_hospital.png" width="70" height="70"/>
         <image name="icon_laboratory Test.png" width="70" height="70"/>
         <image name="icon_surgery.png" width="70" height="70"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

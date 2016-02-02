@@ -25,8 +25,8 @@
     _lorelistArray = [[NSMutableArray alloc]init];
     self.title = @"健康知识";
     [self startProgress];
-    [[HttpRequest shared]getLoreClassFinish:^(NSArray *array) {
-        _loreClassArray = array;
+    [[HttpRequest shared]getLoreClassFinish:^(id responseObject) {
+        _loreClassArray = responseObject[@"tngou"];
         [self createBtn];
         [self refreshData];
         [self getLoreclassBy:0];

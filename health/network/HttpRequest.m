@@ -153,12 +153,11 @@
 }
 
 //获取知识分类
-- (void)getLoreClassFinish:(void(^)(NSArray *array))block
+- (void)getLoreClassFinish:(void(^)(id responseObject))block
 {
     AFHTTPRequestOperationManager *manager = [self getHttpClient];
     [manager GET:[NSString stringWithFormat:@"%@/lore/classify",hostUrl] parameters:[self toParam] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *array = responseObject;
-        block(array);
+        block(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
@@ -184,12 +183,11 @@
 }
 
 //获取药品分类
-- (void)getDrugClassFinish:(void(^)(NSArray *array))block
+- (void)getDrugClassFinish:(void(^)(id responseObject))block
 {
     AFHTTPRequestOperationManager *manager = [self getHttpClient];
     [manager GET:[NSString stringWithFormat:@"%@/drug/classify",hostUrl] parameters:[self toParam] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *array = responseObject;
-        block(array);
+        block(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
@@ -331,14 +329,13 @@
 }
 
 //获取健康图书分类
-- (void)getHealthBookClassFinish:(void(^)(NSArray *array))block
+- (void)getHealthBookClassFinish:(void(^)(id responseObject))block
 {
     AFHTTPRequestOperationManager *manager = [self getHttpClient];
     [manager GET:[NSString stringWithFormat:@"%@/book/classify",hostUrl] parameters:[self toParam] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *array = responseObject;
-        block(array);
+        block(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
+        block(nil);
     }];
 }
 
@@ -351,8 +348,8 @@
     AFHTTPRequestOperationManager *manager = [self getHttpClient];
     [manager GET:[NSString stringWithFormat:@"%@/book/list?id=%ld",hostUrl,Id] parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *bookListArray = [[NSMutableArray alloc]init];
-        if ([[responseObject allKeys] containsObject:@"tngou"]) {
-            NSArray *array = responseObject[@"tngou"];
+        if ([[responseObject allKeys] containsObject:@"list"]) {
+            NSArray *array = responseObject[@"list"];
             for (NSDictionary *dic in array) {
                 TSHealthBookList *model = [[TSHealthBookList alloc]init];
                 model.Id = [dic[@"id"] longValue];
@@ -412,12 +409,11 @@
 }
 
 //检查项目分类
-- (void)getCheckProjectClassFinish:(void(^)(NSArray *array))block
+- (void)getCheckProjectClassFinish:(void(^)(id responseObject))block
 {
     AFHTTPRequestOperationManager *manager = [self getHttpClient];
     [manager GET:[NSString stringWithFormat:@"%@/check/classify",hostUrl] parameters:[self toParam] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *array = responseObject;
-        block(array);
+        block(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
@@ -432,8 +428,8 @@
     AFHTTPRequestOperationManager *manager = [self getHttpClient];
     [manager GET:[NSString stringWithFormat:@"%@/check/list?id=%ld",hostUrl,Id] parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *checkProjectListArray = [[NSMutableArray alloc]init];
-        if ([[responseObject allKeys] containsObject:@"tngou"]) {
-            NSArray *array = responseObject[@"tngou"];
+        if ([[responseObject allKeys] containsObject:@"list"]) {
+            NSArray *array = responseObject[@"list"];
             for (NSDictionary *dic in array) {
                 TSCheckProjectList *model = [[TSCheckProjectList alloc]init];
                 model.name = dic[@"name"];
@@ -480,8 +476,8 @@
     AFHTTPRequestOperationManager *manager = [self getHttpClient];
     [manager GET:[NSString stringWithFormat:@"%@/operation/list?id=%ld",hostUrl,Id] parameters:dic success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *surgeryListArray = [[NSMutableArray alloc]init];
-        if ([[responseObject allKeys] containsObject:@"tngou"]) {
-            NSArray *array = responseObject[@"tngou"];
+        if ([[responseObject allKeys] containsObject:@"list"]) {
+            NSArray *array = responseObject[@"list"];
             for (NSDictionary *dic in array) {
                 TSSurgeryList *model = [[TSSurgeryList alloc]init];
                 model.name = dic[@"name"];
@@ -519,12 +515,11 @@
 }
 
 //健康问题分类
-- (void)getHealthQuestionClassFinish:(void(^)(NSArray *array))block
+- (void)getHealthQuestionClassFinish:(void(^)(id responseObject))block
 {
     AFHTTPRequestOperationManager *manager = [self getHttpClient];
     [manager GET:[NSString stringWithFormat:@"%@/ask/classify",hostUrl] parameters:[self toParam] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *array = responseObject;
-        block(array);
+        block(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];
@@ -578,12 +573,11 @@
 }
 
 //资讯分类
-- (void)getHealthInfoClassFinish:(void(^)(NSArray *array))block
+- (void)getHealthInfoClassFinish:(void(^)(id responseObject))block
 {
     AFHTTPRequestOperationManager *manager = [self getHttpClient];
     [manager GET:[NSString stringWithFormat:@"%@/info/classify",hostUrl] parameters:[self toParam] success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray *array = responseObject;
-        block(array);
+        block(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
     }];

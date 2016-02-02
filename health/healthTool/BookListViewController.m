@@ -68,8 +68,8 @@
 
 - (void)getBookClass
 {
-    [[HttpRequest shared]getHealthBookClassFinish:^(NSArray *array) {
-        _bookClassArray = array;
+    [[HttpRequest shared]getHealthBookClassFinish:^(id responseObject) {
+        _bookClassArray = responseObject[@"tngou"];
         [_bookClassTableView reloadData];
     }];
 }

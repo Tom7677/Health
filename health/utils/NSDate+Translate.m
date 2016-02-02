@@ -256,7 +256,7 @@
     NSTimeInterval timeInterval = [time longLongValue];
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:timeInterval];;
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    [dateFormatter setDateFormat:@"MM-dd HH:mm"];
     NSString *newTime = [dateFormatter stringFromDate:date];
     return newTime;
 }

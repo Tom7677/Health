@@ -53,11 +53,11 @@
 
 - (void)refreshData
 {
-    [[HttpRequest shared]getHealthInfoClassFinish:^(NSArray *array) {
-        _infoClassArray = array;
+    [[HttpRequest shared]getHealthInfoClassFinish:^(id responseObject) {
+        _infoClassArray = responseObject[@"tngou"];
         NSMutableArray *nameArray = [[NSMutableArray alloc]init];
-        for (int i = 0; i < array.count; i ++) {
-            [nameArray addObject:array[i][@"name"]];
+        for (int i = 0; i < _infoClassArray.count; i ++) {
+            [nameArray addObject:_infoClassArray[i][@"name"]];
         }
         _rotateView = [[ZQLRotateView alloc]initWithTitleArrays:nameArray];
         _rotateView.delegate = self;

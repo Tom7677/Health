@@ -37,12 +37,6 @@
     [super didReceiveMemoryWarning];
 }
 
-- (IBAction)diseaseBtnAction:(id)sender {
-    DiseaseListViewController *vc = [[DiseaseListViewController alloc]init];
-    vc.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
 - (IBAction)drugBtnAction:(id)sender {
     DrugClassViewController *vc = [[DrugClassViewController alloc]init];
     vc.tag = 2;

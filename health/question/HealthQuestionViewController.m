@@ -32,12 +32,12 @@
 
 - (void)refreshData
 {
-    [[HttpRequest shared]getHealthQuestionClassFinish:^(NSArray *array) {
-        _questionClassArray = array;
-        for (int i = 0; i < array.count; i ++) {
-            [[HttpRequest shared]getHealthQuestionListById:[array[i][@"id"] longValue] byPage:1 withFinish:^(NSArray *questionListArray, NSError *error, int total) {
-                [_questionListDic setObject:questionListArray forKey:array[i][@"id"]];
-                if (i == array.count - 1) {
+    [[HttpRequest shared]getHealthQuestionClassFinish:^(id responseObject) {
+        _questionClassArray = responseObject[@"tngou"];
+        for (int i = 0; i < _questionClassArray.count; i ++) {
+            [[HttpRequest shared]getHealthQuestionListById:[_questionClassArray[i][@"id"] longValue] byPage:1 withFinish:^(NSArray *questionListArray, NSError *error, int total) {
+                [_questionListDic setObject:questionListArray forKey:_questionClassArray[i][@"id"]];
+                if (i == _questionClassArray.count - 1) {
                     [self stopProgress];
                     [_tableView reloadData];
                 }

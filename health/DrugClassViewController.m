@@ -21,17 +21,17 @@
     self.edgesForExtendedLayout = UIRectEdgeNone;
     if (_tag == 2) {
         self.title = @"药品分类";
-        [[HttpRequest shared]getDrugClassFinish:^(NSArray *array) {
+        [[HttpRequest shared]getDrugClassFinish:^(id responseObject) {
             [self stopProgress];
-            _drugClassArray = array;
+            _drugClassArray = responseObject[@"tngou"];
             [_tableView reloadData];
         }];
     }
     if (_tag == 4) {
         self.title = @"检查项目";
-        [[HttpRequest shared]getCheckProjectClassFinish:^(NSArray *array) {
+        [[HttpRequest shared]getCheckProjectClassFinish:^(id responseObject) {
             [self stopProgress];
-            _drugClassArray = array;
+            _drugClassArray = responseObject[@"tngou"];
             [_tableView reloadData];
         }];
     }

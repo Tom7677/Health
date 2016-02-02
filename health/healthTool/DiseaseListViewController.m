@@ -233,7 +233,6 @@
         default:
             break;
     }
-    
     return view;
 }
 
